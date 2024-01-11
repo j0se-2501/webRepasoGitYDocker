@@ -1,217 +1,384 @@
 <!DOCTYPE html>
 <html lang="es" class="h-100">
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Docker</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/bootstrap.css">
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/bootstrap.css" />
 
     <script src="js/bootstrap.bundle.js" defer></script>
     <script src="js/script.js" defer></script>
-</head>
+  </head>
 
-<body class="d-flex flex-column h-100 bg-dark-subtle">
-
+  <body class="d-flex flex-column h-100 bg-dark-subtle">
     <header>
-        <nav class="navbar navbar-expand-lg bg-secondary-subtle" aria-label="Twelfth navbar example">
-            <div class="container-fluid">
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample10" aria-controls="navbarsExample10" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-      
-              <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample10">
-                <ul class="navbar-nav">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link active dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Ejercicios</a>
-                    <ul class="dropdown-menu bg-secondary-subtle">
-                      <li><a class="dropdown-item" href="git.html">Git</a></li>
-                      <li><a class="dropdown-item" href="docker.html">Docker</a></li>
-                    </ul>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="info.html">Sobre esta web</a>
+      <nav
+        class="navbar navbar-expand-lg bg-secondary-subtle"
+        aria-label="Twelfth navbar example"
+      >
+        <div class="container-fluid">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarsExample10"
+            aria-controls="navbarsExample10"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div
+            class="collapse navbar-collapse justify-content-md-center"
+            id="navbarsExample10"
+          >
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html"
+                  >Inicio</a
+                >
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link active dropdown-toggle"
+                  href="#"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  >Ejercicios</a
+                >
+                <ul class="dropdown-menu bg-secondary-subtle">
+                  <li><a class="dropdown-item" href="git.html">Git</a></li>
+                  <li>
+                    <a class="dropdown-item" href="docker.html">Docker</a>
                   </li>
                 </ul>
-              </div>
-            </div>
-          </nav>
-        </header>
-
-        <div class="container mt-4 pt-3 flex-shrink-0 text-center">
-            <div class="mb-5">
-            <span class="text-center fw-bold fs-3">Ejercicios Docker:</span>
-          </div>
-            <!-- Fila de botones -->
-            <div class="row row-cols-md-4 row-cols-lg-4 row-cols-xl-auto row-cols-xxl-auto row-cols-4 justify-content-between">
-                <div class="col">
-                    <button class="btn btn-dark exercise-button my-3" data-bs-toggle="collapse" data-bs-target="ejercicio1">Ejercicio 1</button>
-                </div>
-                <div class="col">
-                    <button class="btn btn-dark exercise-button my-3" data-bs-toggle="collapse" data-bs-target="ejercicio2">Ejercicio 2</button>
-                </div>
-                <div class="col">
-                  <button class="btn btn-dark exercise-button my-3" data-bs-toggle="collapse" data-bs-target="ejercicio3">Ejercicio 3</button>
-              </div>
-              <div class="col">
-                  <button class="btn btn-dark exercise-button my-3" data-bs-toggle="collapse" data-bs-target="ejercicio4">Ejercicio 4</button>
-              </div>
-              <div class="col">
-                <button class="btn btn-dark exercise-button my-3" data-bs-toggle="collapse" data-bs-target="ejercicio5">Ejercicio 5</button>
-            </div>
-            <div class="col">
-                <button class="btn btn-dark exercise-button my-3" data-bs-toggle="collapse" data-bs-target="ejercicio6">Ejercicio 6</button>
-            </div>
-            <div class="col">
-              <button class="btn btn-dark exercise-button my-3" data-bs-toggle="collapse" data-bs-target="ejercicio7">Ejercicio 7</button>
-          </div>
-          <div class="col">
-              <button class="btn btn-dark exercise-button my-3" data-bs-toggle="collapse" data-bs-target="ejercicio8">Ejercicio 8</button>
-          </div>
-                <!-- Agrega más botones según sea necesario para otros ejercicios -->
-            </div>
-    
-        <!-- Ejercicio 1 -->
-<div id="ejercicio1" class="card mb-3 mt-5 exercise-card d-none">
-  <div class="card-header pt-4">
-      <p class="fw-semibold fs-4">1. ¿Qué es Docker?</p>
-  </div>
-  <div class="card-body">
-      <button class="btn btn-dark" data-bs-toggle="collapse" data-bs-target="#respuestaEjercicio1">Ver respuesta</button>
-      <div id="respuestaEjercicio1" class="collapse mt-3">
-          <p class="fw-semibold fs-4">Docker es una plataforma de software que permite la creación, el despliegue y la ejecución de aplicaciones en contenedores.</p>
-      </div>
-  </div>
-</div>
-
-        <!-- Ejercicio 2 -->
-        <div id="ejercicio2" class="card mb-3 mt-5 exercise-card d-none">
-          <div class="card-header pt-4">
-              <p class="fw-semibold fs-4">2. ¿Cuál es la diferencia entre una imagen y un contenedor en Docker?</p>
-          </div>
-          <div class="card-body">
-              <button class="btn btn-dark" data-bs-toggle="collapse" data-bs-target="#respuestaEjercicio2">Ver respuesta</button>
-              <div id="respuestaEjercicio2" class="collapse mt-3">
-                  <p class="fw-semibold fs-4">Una imagen es una plantilla de solo lectura con instrucciones para crear un contenedor, mientras que un contenedor es una instancia en ejecución de una imagen.</p>
-              </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="info.html"
+                  >Sobre esta web</a
+                >
+              </li>
+            </ul>
           </div>
         </div>
+      </nav>
+    </header>
 
-                <!-- Ejercicio 3 -->
-<div id="ejercicio3" class="card mb-3 mt-5 exercise-card d-none">
-  <div class="card-header pt-4">
-      <p class="fw-semibold fs-4">3. ¿Cómo puedes exponer un puerto en un contenedor Docker?</p>
-  </div>
-  <div class="card-body">
-      <button class="btn btn-dark" data-bs-toggle="collapse" data-bs-target="#respuestaEjercicio3">Ver respuesta</button>
-      <div id="respuestaEjercicio3" class="collapse mt-3">
-          <p class="fw-semibold fs-4">Se puede exponer un puerto en un contenedor Docker utilizando la opción "-p" seguido del puerto del host y del puerto del contenedor.</p>
+    <div class="container mt-4 pt-3 flex-shrink-0 text-center">
+      <div class="mb-5">
+        <span class="text-center fw-bold fs-3">Ejercicios Docker:</span>
       </div>
-  </div>
-</div>
+      <!-- Fila de botones -->
+      <div
+        class="row row-cols-md-4 row-cols-lg-4 row-cols-xl-auto row-cols-xxl-auto row-cols-4 justify-content-between"
+      >
+        <div class="col">
+          <button
+            class="btn btn-dark exercise-button my-3"
+            data-bs-toggle="collapse"
+            data-bs-target="ejercicio1"
+          >
+            Ejercicio 1
+          </button>
+        </div>
+        <div class="col">
+          <button
+            class="btn btn-dark exercise-button my-3"
+            data-bs-toggle="collapse"
+            data-bs-target="ejercicio2"
+          >
+            Ejercicio 2
+          </button>
+        </div>
+        <div class="col">
+          <button
+            class="btn btn-dark exercise-button my-3"
+            data-bs-toggle="collapse"
+            data-bs-target="ejercicio3"
+          >
+            Ejercicio 3
+          </button>
+        </div>
+        <div class="col">
+          <button
+            class="btn btn-dark exercise-button my-3"
+            data-bs-toggle="collapse"
+            data-bs-target="ejercicio4"
+          >
+            Ejercicio 4
+          </button>
+        </div>
+        <div class="col">
+          <button
+            class="btn btn-dark exercise-button my-3"
+            data-bs-toggle="collapse"
+            data-bs-target="ejercicio5"
+          >
+            Ejercicio 5
+          </button>
+        </div>
+        <div class="col">
+          <button
+            class="btn btn-dark exercise-button my-3"
+            data-bs-toggle="collapse"
+            data-bs-target="ejercicio6"
+          >
+            Ejercicio 6
+          </button>
+        </div>
+        <div class="col">
+          <button
+            class="btn btn-dark exercise-button my-3"
+            data-bs-toggle="collapse"
+            data-bs-target="ejercicio7"
+          >
+            Ejercicio 7
+          </button>
+        </div>
+        <div class="col">
+          <button
+            class="btn btn-dark exercise-button my-3"
+            data-bs-toggle="collapse"
+            data-bs-target="ejercicio8"
+          >
+            Ejercicio 8
+          </button>
+        </div>
+        <!-- Agrega más botones según sea necesario para otros ejercicios -->
+      </div>
 
-        <!-- Ejercicio 4 -->
-        <div id="ejercicio4" class="card mb-3 mt-5 exercise-card d-none">
-          <div class="card-header pt-4">
-              <p class="fw-semibold fs-4">4. ¿Cómo puedes detener y eliminar un contenedor en Docker?</p>
-          </div>
-          <div class="card-body">
-              <button class="btn btn-dark" data-bs-toggle="collapse" data-bs-target="#respuestaEjercicio4">Ver respuesta</button>
-              <div id="respuestaEjercicio4" class="collapse mt-3">
-                  <p class="fw-semibold fs-4">Para detener un contenedor: `docker stop nombre_del_contenedor`. Para eliminar un contenedor: `docker rm nombre_del_contenedor`.</p>
-              </div>
+      <!-- Ejercicio 1 -->
+      <div id="ejercicio1" class="card mb-3 mt-5 exercise-card d-none">
+        <div class="card-header pt-4">
+          <p class="fw-semibold fs-4">1. ¿Qué es Docker?</p>
+        </div>
+        <div class="card-body">
+          <button
+            class="btn btn-dark"
+            data-bs-toggle="collapse"
+            data-bs-target="#respuestaEjercicio1"
+          >
+            Ver respuesta
+          </button>
+          <div id="respuestaEjercicio1" class="collapse mt-3">
+            <p class="fw-semibold fs-4">
+              Docker es una plataforma de software que permite la creación, el
+              despliegue y la ejecución de aplicaciones en contenedores.
+            </p>
           </div>
         </div>
-
-                <!-- Ejercicio 5 -->
-<div id="ejercicio5" class="card mb-3 mt-5 exercise-card d-none">
-  <div class="card-header pt-4">
-      <p class="fw-semibold fs-4">5. ¿Qué es un Dockerfile y para qué se utiliza?</p>
-  </div>
-  <div class="card-body">
-      <button class="btn btn-dark" data-bs-toggle="collapse" data-bs-target="#respuestaEjercicio5">Ver respuesta</button>
-      <div id="respuestaEjercicio5" class="collapse mt-3">
-          <p class="fw-semibold fs-4">Un Dockerfile es un archivo de texto que contiene instrucciones para construir una imagen Docker. Se utiliza para automatizar el proceso de creación de imágenes Docker.</p>
       </div>
-  </div>
-</div>
 
-        <!-- Ejercicio 6 -->
-        <div id="ejercicio6" class="card mb-3 mt-5 exercise-card d-none">
-          <div class="card-header pt-4">
-              <p class="fw-semibold fs-4">6. ¿Cómo puedes ver las imágenes de Docker en tu sistema?</p>
-          </div>
-          <div class="card-body">
-              <button class="btn btn-dark" data-bs-toggle="collapse" data-bs-target="#respuestaEjercicio6">Ver respuesta</button>
-              <div id="respuestaEjercicio6" class="collapse mt-3">
-                  <p class="fw-semibold fs-4">Se puede ver la lista de imágenes de Docker en el sistema utilizando el comando `docker images`.</p>
-              </div>
+      <!-- Ejercicio 2 -->
+      <div id="ejercicio2" class="card mb-3 mt-5 exercise-card d-none">
+        <div class="card-header pt-4">
+          <p class="fw-semibold fs-4">
+            2. ¿Cuál es la diferencia entre una imagen y un contenedor en
+            Docker?
+          </p>
+        </div>
+        <div class="card-body">
+          <button
+            class="btn btn-dark"
+            data-bs-toggle="collapse"
+            data-bs-target="#respuestaEjercicio2"
+          >
+            Ver respuesta
+          </button>
+          <div id="respuestaEjercicio2" class="collapse mt-3">
+            <p class="fw-semibold fs-4">
+              Una imagen es una plantilla de solo lectura con instrucciones para
+              crear un contenedor, mientras que un contenedor es una instancia
+              en ejecución de una imagen.
+            </p>
           </div>
         </div>
-
-                <!-- Ejercicio 7 -->
-<div id="ejercicio7" class="card mb-3 mt-5 exercise-card d-none">
-  <div class="card-header pt-4">
-      <p class="fw-semibold fs-4">7. ¿Qué es Docker Compose y para qué se utiliza?</p>
-  </div>
-  <div class="card-body">
-      <button class="btn btn-dark" data-bs-toggle="collapse" data-bs-target="#respuestaEjercicio7">Ver respuesta</button>
-      <div id="respuestaEjercicio7" class="collapse mt-3">
-          <p class="fw-semibold fs-4">Docker Compose es una herramienta que permite definir y gestionar aplicaciones Docker con múltiples contenedores. Se utiliza para simplificar el proceso de definir y ejecutar aplicaciones complejas.</p>
       </div>
-  </div>
-</div>
 
-        <!-- Ejercicio 8 -->
-        <div id="ejercicio8" class="card mb-3 mt-5 exercise-card d-none">
-          <div class="card-header pt-4">
-              <p class="fw-semibold fs-4">8. ¿Cómo puedes construir una imagen Docker desde un Dockerfile?</p>
-          </div>
-          <div class="card-body">
-              <button class="btn btn-dark" data-bs-toggle="collapse" data-bs-target="#respuestaEjercicio8">Ver respuesta</button>
-              <div id="respuestaEjercicio8" class="collapse mt-3">
-                  <p class="fw-semibold fs-4">Se puede construir una imagen Docker desde un Dockerfile utilizando el comando `docker build -t nombre_de_la_imagen ruta_del_Dockerfile`.</p>
-              </div>
+      <!-- Ejercicio 3 -->
+      <div id="ejercicio3" class="card mb-3 mt-5 exercise-card d-none">
+        <div class="card-header pt-4">
+          <p class="fw-semibold fs-4">
+            3. ¿Cómo puedes exponer un puerto en un contenedor Docker?
+          </p>
+        </div>
+        <div class="card-body">
+          <button
+            class="btn btn-dark"
+            data-bs-toggle="collapse"
+            data-bs-target="#respuestaEjercicio3"
+          >
+            Ver respuesta
+          </button>
+          <div id="respuestaEjercicio3" class="collapse mt-3">
+            <p class="fw-semibold fs-4">
+              Se puede exponer un puerto en un contenedor Docker utilizando la
+              opción "-p" seguido del puerto del host y del puerto del
+              contenedor.
+            </p>
           </div>
         </div>
+      </div>
 
-  
-    
-            <!-- Repite la estructura para los demás ejercicios -->
-    
+      <!-- Ejercicio 4 -->
+      <div id="ejercicio4" class="card mb-3 mt-5 exercise-card d-none">
+        <div class="card-header pt-4">
+          <p class="fw-semibold fs-4">
+            4. ¿Cómo puedes detener y eliminar un contenedor en Docker?
+          </p>
+        </div>
+        <div class="card-body">
+          <button
+            class="btn btn-dark"
+            data-bs-toggle="collapse"
+            data-bs-target="#respuestaEjercicio4"
+          >
+            Ver respuesta
+          </button>
+          <div id="respuestaEjercicio4" class="collapse mt-3">
+            <p class="fw-semibold fs-4">
+              Para detener un contenedor: `docker stop nombre_del_contenedor`.
+              Para eliminar un contenedor: `docker rm nombre_del_contenedor`.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Ejercicio 5 -->
+      <div id="ejercicio5" class="card mb-3 mt-5 exercise-card d-none">
+        <div class="card-header pt-4">
+          <p class="fw-semibold fs-4">
+            5. ¿Qué es un Dockerfile y para qué se utiliza?
+          </p>
+        </div>
+        <div class="card-body">
+          <button
+            class="btn btn-dark"
+            data-bs-toggle="collapse"
+            data-bs-target="#respuestaEjercicio5"
+          >
+            Ver respuesta
+          </button>
+          <div id="respuestaEjercicio5" class="collapse mt-3">
+            <p class="fw-semibold fs-4">
+              Un Dockerfile es un archivo de texto que contiene instrucciones
+              para construir una imagen Docker. Se utiliza para automatizar el
+              proceso de creación de imágenes Docker.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Ejercicio 6 -->
+      <div id="ejercicio6" class="card mb-3 mt-5 exercise-card d-none">
+        <div class="card-header pt-4">
+          <p class="fw-semibold fs-4">
+            6. ¿Cómo puedes ver las imágenes de Docker en tu sistema?
+          </p>
+        </div>
+        <div class="card-body">
+          <button
+            class="btn btn-dark"
+            data-bs-toggle="collapse"
+            data-bs-target="#respuestaEjercicio6"
+          >
+            Ver respuesta
+          </button>
+          <div id="respuestaEjercicio6" class="collapse mt-3">
+            <p class="fw-semibold fs-4">
+              Se puede ver la lista de imágenes de Docker en el sistema
+              utilizando el comando `docker images`.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Ejercicio 7 -->
+      <div id="ejercicio7" class="card mb-3 mt-5 exercise-card d-none">
+        <div class="card-header pt-4">
+          <p class="fw-semibold fs-4">
+            7. ¿Qué es Docker Compose y para qué se utiliza?
+          </p>
+        </div>
+        <div class="card-body">
+          <button
+            class="btn btn-dark"
+            data-bs-toggle="collapse"
+            data-bs-target="#respuestaEjercicio7"
+          >
+            Ver respuesta
+          </button>
+          <div id="respuestaEjercicio7" class="collapse mt-3">
+            <p class="fw-semibold fs-4">
+              Docker Compose es una herramienta que permite definir y gestionar
+              aplicaciones Docker con múltiples contenedores. Se utiliza para
+              simplificar el proceso de definir y ejecutar aplicaciones
+              complejas.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Ejercicio 8 -->
+      <div id="ejercicio8" class="card mb-3 mt-5 exercise-card d-none">
+        <div class="card-header pt-4">
+          <p class="fw-semibold fs-4">
+            8. ¿Cómo puedes construir una imagen Docker desde un Dockerfile?
+          </p>
+        </div>
+        <div class="card-body">
+          <button
+            class="btn btn-dark"
+            data-bs-toggle="collapse"
+            data-bs-target="#respuestaEjercicio8"
+          >
+            Ver respuesta
+          </button>
+          <div id="respuestaEjercicio8" class="collapse mt-3">
+            <p class="fw-semibold fs-4">
+              Se puede construir una imagen Docker desde un Dockerfile
+              utilizando el comando `docker build -t nombre_de_la_imagen
+              ruta_del_Dockerfile`.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Repite la estructura para los demás ejercicios -->
+    </div>
+
+    <!-- Botones de Ejercicio Anterior y Siguiente -->
+    <div id="botonesNavegacion" class="container mt-4 d-none">
+      <div class="row justify-content-between">
+        <div class="col text-start">
+          <button id="ejercicioAnterior" class="btn btn-dark px-4">←</button>
         </div>
 
-        <!-- Botones de Ejercicio Anterior y Siguiente -->
-        <div id="botonesNavegacion" class="container mt-4 d-none">
-        <div class="row justify-content-between">
-          <div class="col text-start">
-              <button id="ejercicioAnterior" class="btn btn-dark px-4">←</button>
-          </div>
-          
-          <div class="col text-end">
-              <button id="ejercicioSiguiente" class="btn btn-dark px-4">→</button>
-          </div>
+        <div class="col text-end">
+          <button id="ejercicioSiguiente" class="btn btn-dark px-4">→</button>
+        </div>
       </div>
-      </div>
+    </div>
 
-        <div class="footer mt-auto mx-5 pt-5 bottom-0">
-            <footer class="container d-flex flex-wrap justify-content-between align-items-center py-3 my-4 mt border-top border-black">
-              <div class="col-md-4 d-flex align-items-center">
-                <span class="mb-3 mb-md-0 fw-semibold">@j0se-2501</span>
-              </div>
-          
-              <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-                <li class="ms-3"><a class="text-muted" href="https://github.com/j0se-2501"><img src="img/githubLogo.png" alt=""></a></li>
-                
-              </ul>
-            </footer>
-      </div>
+    <div class="footer mt-auto mx-5 pt-5 bottom-0">
+      <footer
+        class="container d-flex flex-wrap justify-content-between align-items-center py-3 my-4 mt border-top border-black"
+      >
+        <div class="col-md-4 d-flex align-items-center">
+          <span class="mb-3 mb-md-0 fw-semibold">@j0se-2501</span>
+        </div>
 
-</body>
-
+        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+          <li class="ms-3">
+            <a class="text-muted" href="https://github.com/j0se-2501"
+              ><img src="img/githubLogo.png" alt=""
+            /></a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+  </body>
 </html>
